@@ -1,0 +1,36 @@
+{
+  "name": "Knock Note",
+  "version": "1.1",
+  "description": "Note in right click",
+  "permissions": [
+    "activeTab", "declarativeContent", "storage","contextMenus","tabs",
+    "https://1tlk1ig1cc.execute-api.us-east-2.amazonaws.com/stageone/note"
+  ],
+  "homepage_url": "https://www.baidu.com",
+  "background": {
+    "scripts": ["background.js","jquery-3.4.1.min.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://knocknote.s3-website.us-east-2.amazonaws.com/*"
+      ],
+      "js": [
+        "jquery-3.4.1.min.js",
+        "content.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "images/note_gary.png"
+  },
+  "externally_connectable": {
+    "ids": ["*"],
+    "matches": ["http://knocknote.s3-website.us-east-2.amazonaws.com/*"]
+  },
+  "icons":{
+    "128": "images/note.png"
+  },
+  "manifest_version": 2
+}

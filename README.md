@@ -1,3 +1,2 @@
-# Google extension Knock note project
-This is a cloud computing project implemented based on AWS services.
-A web extension to record and save web information by right click.
+# KnockNote_google_extension
+To see how to use the extension, please reffer to the live demo https://youtu.be/36b1D_LHC6Y
